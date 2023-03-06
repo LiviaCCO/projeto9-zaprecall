@@ -5,7 +5,7 @@ import setaPlay from './assets/seta_play.png';
 import setaReturn from './assets/seta_virar.png';
 //import Title from './Title.js';
 //import Question from './Question.js'
-const color="";
+
 export default function App() {
   return (
     <Container>
@@ -73,9 +73,9 @@ return(
   <QuestResposta>
     <p>JSX é uma sintaxe para escrever HTML dentro do JS.</p>
     <Botoes>
-      <button className={Red}>Não lembrei</button>
-      <button>Quase não lembrei</button>
-      <button>Zap!</button>
+      <Botao color={"#FF3030"}>Não lembrei</Botao>
+      <Botao color={"#FF922E"}>Quase não lembrei</Botao>
+      <Botao color={"#2FBE34"}>Zap!</Botao>
     </Botoes>
     
   </QuestResposta>
@@ -90,15 +90,28 @@ return(
 </>
 )
 }
-const Red=QuestResposta.extend{
-  background-color:FF3030;
-}
 const Botoes=styled.div`
   width: 100%;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
 `
+const Botao=styled.button`
+  width: 85.17px;
+  height: 37.17px;
+  background: ${props => props.color};
+  border: none;
+  border-radius: 5px;
+  font-family: 'Recursive';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+`
+
 const QuestResposta=styled.div`
   width: 80%;
   height: 131px;
@@ -118,21 +131,6 @@ const QuestResposta=styled.div`
     font-size: 18px;
     line-height: 22px;
     color: #333333;
-  }
-  button{
-    width: 85.17px;
-    height: 37.17px;
-    background: ${color};
-    border: none;
-    border-radius: 5px;
-    font-family: 'Recursive';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-    align-items: center;
-    text-align: center;
-    color: #FFFFFF;
   }
 `
 
