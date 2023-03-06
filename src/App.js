@@ -23,7 +23,7 @@ export default function App() {
       displayPergunta = {displayPergunta}
       setDisplayPergunta = {setDisplayPergunta}
       displayResposta = {displayResposta}
-      setDisplayResposta = {setDisplayResposta}
+      setDisplayPergunta = {setDisplayPergunta}
       resultado={resultado} 
       setResultado={setResultado}/>
       <Concluidos resultado={resultado}/>
